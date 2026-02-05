@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earn Your Scroll - Settings</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Earn Your Scroll Settings</h1>
+            <p class="subtitle">Manage your restricted websites</p>
+        </div>
+
+        <div class="stats-card">
+            <div class="stat-item">
+                <span class="stat-label">Lifetime Questions Answered</span>
+                <span class="stat-value" id="questionsAnswered">0</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Restricted Sites</h2>
+            <div class="checkbox-list">
+                <label class="checkbox-item">
+                    <input type="checkbox" name="sites" value="youtube.com" data-site="YouTube">
+                    <span class="checkbox-text">
+                        <span class="site-name">YouTube</span>
+                        <span class="site-url">youtube.com</span>
+                    </span>
+                </label>
+                
+                <label class="checkbox-item">
+                    <input type="checkbox" name="sites" value="instagram.com" data-site="Instagram">
+                    <span class="checkbox-text">
+                        <span class="site-name">Instagram</span>
+                        <span class="site-url">instagram.com</span>
+                    </span>
+                </label>
+                
+                <label class="checkbox-item">
+                    <input type="checkbox" name="sites" value="tiktok.com" data-site="TikTok">
+                    <span class="checkbox-text">
+                        <span class="site-name">TikTok</span>
+                        <span class="site-url">tiktok.com</span>
+                    </span>
+                </label>
+                
+                <label class="checkbox-item">
+                    <input type="checkbox" name="sites" value="reddit.com" data-site="Reddit">
+                    <span class="checkbox-text">
+                        <span class="site-name">Reddit</span>
+                        <span class="site-url">reddit.com</span>
+                    </span>
+                </label>
+                
+                <label class="checkbox-item">
+                    <input type="checkbox" name="sites" value="facebook.com" data-site="Facebook">
+                    <span class="checkbox-text">
+                        <span class="site-name">Facebook</span>
+                        <span class="site-url">facebook.com</span>
+                    </span>
+                </label>
+            </div>
+        </div>
+
+        <div class="section custom-site-section">
+            <h2>Add Custom Site</h2>
+            <div class="input-group">
+                <input type="text" id="customSiteInput" placeholder="Enter domain (e.g., example.com)">
+                <button id="addCustomBtn" class="btn-secondary">Add</button>
+            </div>
+            <div id="customSitesList" class="custom-sites-list"></div>
+        </div>
+
+        <button id="saveBtn" class="btn-primary">Save Settings</button>
+        
+        <div id="notification" class="notification"></div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

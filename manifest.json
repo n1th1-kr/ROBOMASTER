@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Earn Your Scroll",
+  "version": "1.0.0",
+  "description": "Answer questions to earn scrolling time on restricted websites",
+  
+  "permissions": [
+    "storage",
+    "scripting"
+  ],
+  
+  "host_permissions": [
+    "*://*/*"
+  ],
+  
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Earn Your Scroll Settings"
+  },
+  
+  "background": {
+    "service_worker": "background.js"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_start"
+    }
+  ]
+}
